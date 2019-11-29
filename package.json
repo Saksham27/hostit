@@ -1,0 +1,22 @@
+{
+	"name": "hostit",
+	"version": "1.0.0",
+	"description": "HostIT landing page",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss resources/css/style.css -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Saksham27/hostit.git"
+	},
+	"author": "Saksham Singh",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Saksham27/hostit/issues"
+	},
+	"homepage": "https://github.com/Saksham27/hostit#readme",
+	"devDependencies": {
+		"node-sass": "^4.13.0"
+	}
+}
