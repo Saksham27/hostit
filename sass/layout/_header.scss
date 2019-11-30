@@ -1,0 +1,13 @@
+.hero-section {
+	display: block;
+
+	&__hero-text {
+		text-align: center;
+		font-family: $lf;
+		margin-top: -7.5rem;
+		padding: 31rem 0;
+		background-image: url(../../resources/img/top-banner-1.png);
+		background-position: center right;
+		background-size: cover;
+	}
+}

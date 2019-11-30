@@ -1,0 +1,34 @@
+.btn {
+	font-family: $mukta;
+	font-weight: 500;
+	font-size: 1.6rem;
+
+	text-transform: uppercase;
+	padding: 1.2rem 3rem;
+	text-decoration: none;
+	display: inline-block;
+
+	&-white {
+		color: $color-primary;
+		border: 0.2rem solid $color-white;
+		background-color: $color-white;
+
+		&:hover {
+			color: $color-white;
+			background-color: transparent;
+		}
+	}
+
+	&-grey {
+		color: $color-white;
+		border: none;
+		background-color: $color-grey-dark;
+		transition: all 0.4s;
+		//line-height: initial;
+
+		&:hover {
+			color: $color-white;
+			background-color: $color-primary;
+		}
+	}
+}

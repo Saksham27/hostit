@@ -1,0 +1,88 @@
+body {
+	font-family: $lf;
+}
+
+.menu-item {
+	text-transform: uppercase;
+	font-family: $mukta;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: $color-white;
+	text-decoration: none;
+	//outline: 0.1rem solid transparent;
+	padding: 1.2rem;
+	border: 1px solid transparent;
+	transition: all 0.2s;
+
+	&:hover,
+	&:visited {
+		// outline: 0.1rem solid $color-white;
+		// outline-offset: 1rem;
+		border: 1px solid $color-white;
+	}
+
+	&:active {
+		border: 1px solid $color-white;
+		background-color: $color-white;
+		color: $color-primary;
+	}
+}
+
+.hero {
+	&-tagline {
+		width: 80rem;
+		margin: auto;
+		color: $color-white;
+		font-family: $mukta;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&-heading {
+		width: 80rem;
+		margin: auto;
+		color: $color-white;
+		font-family: $baloo;
+		font-size: 5.4rem;
+		font-weight: 400;
+		line-height: 1;
+	}
+}
+
+.heading {
+	font-family: $baloo;
+	text-align: center;
+	color: $color-primary;
+	font-weight: 400;
+
+	&-large {
+		font-size: 4rem;
+		letter-spacing: $space-small;
+	}
+
+	&-medium {
+		font-size: 2.8rem;
+		//letter-spacing: $space-small;
+	}
+
+	&-small {
+		font-size: 2.4rem;
+		//letter-spacing: $space-small;
+	}
+}
+
+.heading-under {
+	font-family: $mukta;
+	font-size: 1.8rem;
+	text-align: center;
+	color: $color-grey;
+}
+
+// Font awesome icon
+.font-icon {
+	display: inline-block;
+	margin-right: 2rem;
+	font-size: 2rem;
+	color: $color-primary;
+}

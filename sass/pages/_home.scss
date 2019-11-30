@@ -1,0 +1,66 @@
+.section-packages {
+	margin: 0;
+
+	&__heading {
+	}
+
+	&__container {
+		max-width: 100vw;
+		background-image: url(../../resources/img/bg-1.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	&__package-list {
+		padding-top: 5rem;
+		display: flex;
+		max-width: 114rem;
+		margin: 0 auto;
+		justify-content: space-around;
+
+		&__package {
+			margin: 1rem 1.65%;
+			padding: 5rem 0;
+			text-align: center;
+			border: 0.1rem solid $color-primary;
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+			background-color: $color-white;
+
+			& p:first-of-type {
+				font-family: $mukta;
+				color: $color-primary;
+				font-size: 1.6rem;
+				margin-top: 0.5rem;
+				margin-bottom: -0.5rem;
+				font-weight: 500;
+			}
+
+			&--1 {
+				width: 30%;
+				align-self: flex-start;
+			}
+			&--2 {
+				width: 30%;
+				margin-top: 15rem;
+				align-self: flex-end;
+			}
+			&--3 {
+				width: 30%;
+				align-self: flex-start;
+			}
+
+			&__details {
+				font-family: $mukta;
+				margin-top: 3rem;
+				list-style: none;
+				font-size: 1.6rem;
+				line-height: 4rem;
+			}
+
+			&__button {
+				margin-top: 3rem;
+			}
+		}
+	}
+}
