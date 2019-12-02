@@ -11,8 +11,23 @@
 /*============================================*/
 
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; // 1rem =10px
 	outline: none;
+
+	@include respond(big-dekstop) {
+		// 1rem = 12px
+		font-size: 75%;
+	}
+	@include respond(tab-land) {
+		// 1rem = 9px
+		font-size: 56.25%;
+	}
+	@include respond(tab-port) {
+		// 1rem = 8px
+		font-size: 50%;
+	}
+	@include respond(phone-large) {
+		// 1rem = 6px
+		font-size: 37.5%;
+	}
 }
-
-

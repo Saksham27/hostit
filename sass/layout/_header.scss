@@ -1,5 +1,6 @@
 .hero-section {
 	display: block;
+	width: 100vw;
 
 	&__hero-text {
 		text-align: center;
@@ -9,5 +10,10 @@
 		background-image: url(../../resources/img/top-banner-1.png);
 		background-position: center right;
 		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include respond(phone-large) {
+			height: 48rem;
+		}
 	}
 }

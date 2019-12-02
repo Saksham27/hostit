@@ -20,17 +20,33 @@ p {
 	border: 1px solid transparent;
 	transition: all 0.2s;
 
+	@include respond(tab-port) {
+		border: none;
+		padding: 1.2rem;
+		color: $color-primary;
+	}
+
 	&:hover,
 	&:visited {
 		// outline: 0.1rem solid $color-white;
 		// outline-offset: 1rem;
 		border: 1px solid $color-white;
+
+		@include respond(tab-port) {
+			border: none;
+			color: $color-white;
+		}
 	}
 
 	&:active {
 		border: 1px solid $color-white;
-		background-color: $color-white;
+		//background-color: $color-white;
 		color: $color-primary;
+
+		@include respond(tab-port) {
+			border: none;
+			color: $color-white;
+		}
 	}
 }
 
@@ -43,6 +59,8 @@ p {
 		font-size: 2.2rem;
 		text-transform: uppercase;
 		font-weight: 600;
+
+		
 	}
 
 	&-heading {
@@ -91,4 +109,20 @@ p {
 	margin-right: 2rem;
 	font-size: 2rem;
 	color: $color-primary;
+}
+
+.fonticon-hamburger {
+	outline: none;
+	text-align: center;
+	display: inline-block;
+	font-size: 4rem;
+	color: $color-white;
+}
+.fonticon-close {
+	outline: none;
+	text-align: center;
+	display: inline-block;
+	font-size: 4rem;
+	transform: translateX(-4rem);
+	color: $color-white;
 }
