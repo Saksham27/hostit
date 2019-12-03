@@ -100,64 +100,57 @@
 }
 
 .section-services {
+	&__heading {
+	}
+
 	&__service-list {
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
-		//justify-content: flex-end;
-		max-width: 114rem;
-		margin: 3rem auto;
 
 		&__list {
+			flex: 1;
 			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			//align-items: center;
-			padding: 0 5rem;
-
-			@include respond(tab-port) {
-				&:not(:first-child) {
-					margin-top: -10rem;
-				}
-			}
 
 			@include respond(phone-large) {
 				flex-direction: column;
 			}
 
 			&__img {
-				align-self: center;
+				flex: 1;
+				display: flex;
 
-				@include respond(tab-port) {
-					transform: scale(0.7);
+				& img {
+					margin: auto;
+
+					@include respond(tab-port) {
+						width: 80%;
+					}
+					@include respond(phone-large) {
+						width: 50%;
+					}
 				}
 			}
 
 			&__details {
-				width: 100%;
+				flex: 1;
 				display: flex;
 				flex-direction: column;
-				align-items: flex-start;
-				justify-content: flex-start;
-				margin: 13rem 5rem 0 0;
-
-				@include respond(tab-port) {
-					flex-grow: 1;
-					margin: 13rem 2rem 0 0rem;
-				}
-
-				@include respond(phone-large) {
-					margin: 3rem auto;
-				}
+				justify-content: center;
 
 				&__heading {
-					font-size: 3rem;
 				}
 
 				&__paragraph {
-					margin-top: 2rem;
-					font-size: 1.8rem;
-					line-height: 3.2rem;
+					margin: 3rem 4rem 0 4rem;
+				}
+
+				&--2 {
+					order: -1;
+
+					@include respond(phone-large) {
+						order: 0;
+					}
 				}
 			}
 		}
@@ -202,6 +195,9 @@
 			@include respond(tab-land) {
 				padding: 0 5rem 0 3rem;
 			}
+			@include respond(tab-port) {
+				padding: 0 5rem 0 3rem;
+			}
 
 			& p {
 				font-size: 1.8rem;
@@ -227,6 +223,12 @@
 				@include respond(tab-port) {
 					width: 70rem;
 				}
+				@include respond(phone-large) {
+					width: 60rem;
+				}
+				@include respond(phone-small) {
+					width: 50rem;
+				}
 			}
 		}
 	}
@@ -243,39 +245,38 @@
 		flex-direction: row;
 		cursor: grab;
 
+		@include respond(phone-large) {
+			flex-direction: column;
+		}
+
 		&__img {
-			//width: 50%;
-			margin: -8rem 0 0 -13rem;
+			flex: 1;
+			margin: 0 auto;
 			z-index: -1;
-			transform: scale(0.8);
+			display: flex;
 
-			@include respond(tab-land) {
-				margin: -12rem 0 0 -20rem;
-				transform: scale(0.75);
-			}
+			& img {
+				width: 100%;
 
-			@include respond(tab-port) {
-				margin: -15rem 0 0 -20rem;
-				transform: scale(0.6);
+				@include respond(phone-large) {
+					width: 40%;
+					transform: scale(1.4);
+					margin: auto;
+				}
 			}
 		}
 
 		&__paragraph {
+			flex: 1;
 			//width: 50%;
-			margin: 12rem 0 0 -8rem;
-			align-self: flex-start;
+			margin-right: 2rem;
+			align-self: center;
 			justify-self: left;
 			z-index: 2;
 
-			@include respond(tab-land) {
-				margin-left: -15rem;
-				padding-right: 1rem;
-			}
-
-			@include respond(tab-port) {
-				transform: translateX(-10rem);
-				margin-left: -15rem;
-				padding-right: 1rem;
+			@include respond(phone-large) {
+				justify-self: center;
+				margin: 2rem;
 			}
 
 			& p {
@@ -293,7 +294,7 @@
 .section-showcase {
 	margin-top: 2rem;
 	display: flex;
-	padding: 8rem 10rem;
+	padding: 8rem 4rem;
 	width: 100vw;
 	background-image: url(../../resources/img/dot-bgpng.png);
 	background-repeat: repeat;
@@ -330,15 +331,20 @@
 	}
 
 	&__images {
-		//margin-left: 5rem;
-
 		@include respond(tab-port) {
-			padding-top: 3rem;
+			margin-top: 2rem;
+		}
+		& img {
+			@include respond(phone-large) {
+				width: 80%;
+				height: 100%;
+			}
 		}
 	}
 
 	&__box {
 		width: 80%;
+		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -348,10 +354,13 @@
 		height: 100%;
 
 		&__item {
-			width: 35%;
+			width: auto;
 			margin: 0;
 			@include respond(tab-port) {
 				margin: 2rem 0;
+			}
+			@include respond(phone-large) {
+				width: 50%;
 			}
 		}
 	}

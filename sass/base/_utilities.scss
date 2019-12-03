@@ -5,3 +5,21 @@
 .utility-margin-top-small {
 	margin-top: 1rem;
 }
+
+.utility {
+	box-sizing: border-box;
+	padding: 0;
+
+	&-row {
+		box-sizing: border-box;
+		margin: 0 5rem;
+	}
+
+	&-block-large {
+		margin-top: 15rem;
+	}
+
+	&-block-small {
+		margin-top: 4rem;
+	}
+}

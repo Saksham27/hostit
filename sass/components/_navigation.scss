@@ -11,17 +11,35 @@
 		width: 4.5rem;
 		display: none;
 		@include respond(tab-port) {
+			position: absolute;
 			outline: none;
-			display: inline-block;
-			padding-right: 3rem;
-			transform: translateY(0.3rem);
+			display: block;
+			margin-right: 2rem;
+			padding: 0;
+			//padding-right: 3rem;
+			transform: translateY(0.2rem);
 			@include clearfix;
 		}
 	}
 
 	&__brand-title {
-		margin-right: -4rem;
-		display: inline-block;
+		//margin-right: -4rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		& img {
+			@include respond(tab-port) {
+				margin-left: 8rem;
+			}
+			@include respond(phone-large) {
+				margin-left: 8rem;
+			}
+			@include respond(phone-small) {
+				width: 60%;
+				margin-left: 5rem;
+			}
+		}
 	}
 
 	&__main-nav {

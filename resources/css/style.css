@@ -51,7 +51,8 @@ body {
 
 p {
   font-family: "Mukta", sans-serif;
-  color: #3b3b3b; }
+  color: #3b3b3b;
+  font-size: 1.8rem; }
 
 .menu-item {
   text-transform: uppercase;
@@ -83,7 +84,8 @@ p {
         color: #ffffff; } }
 
 .hero-tagline {
-  width: 80rem;
+  max-width: 80rem;
+  padding: 0 2rem;
   margin: auto;
   color: #ffffff;
   font-family: "Mukta", sans-serif;
@@ -92,7 +94,8 @@ p {
   font-weight: 600; }
 
 .hero-heading {
-  width: 80rem;
+  max-width: 80rem;
+  padding: 0 2rem;
   margin: auto;
   color: #ffffff;
   font-family: "Baloo Chettan", cursive;
@@ -137,7 +140,6 @@ p {
   text-align: center;
   display: inline-block;
   font-size: 4rem;
-  transform: translateX(-4rem);
   color: #ffffff; }
 
 .utility-margin-top-large {
@@ -145,6 +147,17 @@ p {
 
 .utility-margin-top-small {
   margin-top: 1rem; }
+
+.utility {
+  box-sizing: border-box;
+  padding: 0; }
+  .utility-row {
+    box-sizing: border-box;
+    margin: 0 5rem; }
+  .utility-block-large {
+    margin-top: 15rem; }
+  .utility-block-small {
+    margin-top: 4rem; }
 
 .btn {
   font-family: "Mukta", sans-serif;
@@ -173,8 +186,19 @@ p {
 .carousel {
   position: relative;
   width: 114rem;
-  height: 66rem;
+  height: 60rem;
   margin: 0 auto; }
+  @media only screen and (min-width: 112.5em) {
+    .carousel {
+      height: 70rem; } }
+  @media only screen and (max-width: 65.625em) {
+    .carousel {
+      width: 100vw;
+      height: 55rem; } }
+  @media only screen and (max-width: 48em) {
+    .carousel {
+      width: 100vw;
+      height: 70rem; } }
   .carousel__track-container {
     height: 100%;
     position: relative;
@@ -191,7 +215,7 @@ p {
     margin: auto; }
   .carousel__nav {
     position: relative;
-    margin-top: -10rem;
+    margin: -10rem auto 0 auto;
     display: flex;
     justify-content: center;
     padding: 1rem 0; }
@@ -220,17 +244,30 @@ p {
     display: none; }
     @media only screen and (max-width: 65.625em) {
       .navbar__menu-button {
+        position: absolute;
         outline: none;
-        display: inline-block;
-        padding-right: 3rem;
-        transform: translateY(0.3rem); }
+        display: block;
+        margin-right: 2rem;
+        padding: 0;
+        transform: translateY(0.2rem); }
         .navbar__menu-button::after {
           content: '';
           display: table;
           clear: both; } }
   .navbar__brand-title {
-    margin-right: -4rem;
-    display: inline-block; }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    @media only screen and (max-width: 65.625em) {
+      .navbar__brand-title img {
+        margin-left: 8rem; } }
+    @media only screen and (max-width: 48em) {
+      .navbar__brand-title img {
+        margin-left: 8rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .navbar__brand-title img {
+        width: 60%;
+        margin-left: 5rem; } }
   .navbar__main-nav--horizontal {
     margin-left: 4rem;
     display: flex;
@@ -389,47 +426,38 @@ p {
         margin-top: 3rem; }
 
 .section-services__service-list {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  max-width: 114rem;
-  margin: 3rem auto; }
+  flex-direction: column; }
   .section-services__service-list__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 5rem; }
-    @media only screen and (max-width: 65.625em) {
-      .section-services__service-list__list:not(:first-child) {
-        margin-top: -10rem; } }
+    flex: 1;
+    display: flex; }
     @media only screen and (max-width: 48em) {
       .section-services__service-list__list {
         flex-direction: column; } }
     .section-services__service-list__list__img {
-      align-self: center; }
-      @media only screen and (max-width: 65.625em) {
-        .section-services__service-list__list__img {
-          transform: scale(0.7); } }
+      flex: 1;
+      display: flex; }
+      .section-services__service-list__list__img img {
+        margin: auto; }
+        @media only screen and (max-width: 65.625em) {
+          .section-services__service-list__list__img img {
+            width: 80%; } }
+        @media only screen and (max-width: 48em) {
+          .section-services__service-list__list__img img {
+            width: 50%; } }
     .section-services__service-list__list__details {
-      width: 100%;
+      flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin: 13rem 5rem 0 0; }
-      @media only screen and (max-width: 65.625em) {
-        .section-services__service-list__list__details {
-          flex-grow: 1;
-          margin: 13rem 2rem 0 0rem; } }
-      @media only screen and (max-width: 48em) {
-        .section-services__service-list__list__details {
-          margin: 3rem auto; } }
-      .section-services__service-list__list__details__heading {
-        font-size: 3rem; }
+      justify-content: center; }
       .section-services__service-list__list__details__paragraph {
-        margin-top: 2rem;
-        font-size: 1.8rem;
-        line-height: 3.2rem; }
+        margin: 3rem 4rem 0 4rem; }
+      .section-services__service-list__list__details--2 {
+        order: -1; }
+        @media only screen and (max-width: 48em) {
+          .section-services__service-list__list__details--2 {
+            order: 0; } }
 
 .section-about {
   background-image: url(../../resources/img/bg-2.png);
@@ -461,6 +489,9 @@ p {
       @media only screen and (max-width: 75em) {
         .section-about__details__paragraph {
           padding: 0 5rem 0 3rem; } }
+      @media only screen and (max-width: 65.625em) {
+        .section-about__details__paragraph {
+          padding: 0 5rem 0 3rem; } }
       .section-about__details__paragraph p {
         font-size: 1.8rem;
         color: #ffffff;
@@ -478,6 +509,12 @@ p {
         @media only screen and (max-width: 65.625em) {
           .section-about__details__video video {
             width: 70rem; } }
+        @media only screen and (max-width: 48em) {
+          .section-about__details__video video {
+            width: 60rem; } }
+        @media only screen and (max-width: 31.25em) {
+          .section-about__details__video video {
+            width: 50rem; } }
 
 .section-testimonials__testimonial {
   width: 100vw;
@@ -485,32 +522,31 @@ p {
   display: flex;
   flex-direction: row;
   cursor: grab; }
+  @media only screen and (max-width: 48em) {
+    .section-testimonials__testimonial {
+      flex-direction: column; } }
   .section-testimonials__testimonial__img {
-    margin: -8rem 0 0 -13rem;
+    flex: 1;
+    margin: 0 auto;
     z-index: -1;
-    transform: scale(0.8); }
-    @media only screen and (max-width: 75em) {
-      .section-testimonials__testimonial__img {
-        margin: -12rem 0 0 -20rem;
-        transform: scale(0.75); } }
-    @media only screen and (max-width: 65.625em) {
-      .section-testimonials__testimonial__img {
-        margin: -15rem 0 0 -20rem;
-        transform: scale(0.6); } }
+    display: flex; }
+    .section-testimonials__testimonial__img img {
+      width: 100%; }
+      @media only screen and (max-width: 48em) {
+        .section-testimonials__testimonial__img img {
+          width: 40%;
+          transform: scale(1.4);
+          margin: auto; } }
   .section-testimonials__testimonial__paragraph {
-    margin: 12rem 0 0 -8rem;
-    align-self: flex-start;
+    flex: 1;
+    margin-right: 2rem;
+    align-self: center;
     justify-self: left;
     z-index: 2; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 48em) {
       .section-testimonials__testimonial__paragraph {
-        margin-left: -15rem;
-        padding-right: 1rem; } }
-    @media only screen and (max-width: 65.625em) {
-      .section-testimonials__testimonial__paragraph {
-        transform: translateX(-10rem);
-        margin-left: -15rem;
-        padding-right: 1rem; } }
+        justify-self: center;
+        margin: 2rem; } }
     .section-testimonials__testimonial__paragraph p {
       font-size: 1.6rem; }
     .section-testimonials__testimonial__paragraph .heading {
@@ -520,7 +556,7 @@ p {
 .section-showcase {
   margin-top: 2rem;
   display: flex;
-  padding: 8rem 10rem;
+  padding: 8rem 4rem;
   width: 100vw;
   background-image: url(../../resources/img/dot-bgpng.png);
   background-repeat: repeat;
@@ -548,9 +584,14 @@ p {
       line-height: 3.2rem; }
   @media only screen and (max-width: 65.625em) {
     .section-showcase__images {
-      padding-top: 3rem; } }
+      margin-top: 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .section-showcase__images img {
+      width: 80%;
+      height: 100%; } }
   .section-showcase__box {
     width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -559,11 +600,14 @@ p {
     justify-content: space-around;
     height: 100%; }
     .section-showcase__box__item {
-      width: 35%;
+      width: auto;
       margin: 0; }
       @media only screen and (max-width: 65.625em) {
         .section-showcase__box__item {
           margin: 2rem 0; } }
+      @media only screen and (max-width: 48em) {
+        .section-showcase__box__item {
+          width: 50%; } }
 
 .section-getstarted {
   padding: 6rem;
