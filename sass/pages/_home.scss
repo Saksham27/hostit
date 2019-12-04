@@ -7,6 +7,10 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
+
+		@include respond(tab-port) {
+			background-image: url(../../resources/img/bg-1-min.png);
+		}
 	}
 
 	&__package-list {
@@ -158,9 +162,13 @@
 }
 
 .section-about {
-	background-image: url(../../resources/img/bg-2.png);
+	background-image: url(../../resources/img/bg-2-min.png);
 	background-size: cover;
 	padding: 3rem 0;
+
+	@include respond(big-dekstop) {
+		background-image: url(../../resources/img/bg-2.png);
+	}
 
 	&__heading {
 		width: 60%;
@@ -302,6 +310,7 @@
 
 	@include respond(tab-port) {
 		flex-direction: column;
+		background-image: url(../../resources/img/dot-bgpng-min.png);
 	}
 
 	&__details {
@@ -368,7 +377,11 @@
 
 .section-getstarted {
 	padding: 6rem;
-	background-image: url(../../resources/img/bottom-bg.png);
+	background-image: url(../../resources/img/bottom-bg-min.png);
+
+	@include respond(big-dekstop) {
+		background-image: url(../../resources/img/bottom-bg.png);
+	}
 
 	& .heading {
 		color: $color-white;

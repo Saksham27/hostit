@@ -7,11 +7,14 @@
 		font-family: $lf;
 		margin-top: -7.5rem;
 		padding: 31rem 0;
-		background-image: url(../../resources/img/top-banner-1.png);
+		background-image: url(../../resources/img/top-banner-1-min.png);
 		background-position: center right;
 		background-size: cover;
 		background-repeat: no-repeat;
 
+		@include respond(big-dekstop) {
+			background-image: url(../../resources/img/top-banner-1.png);
+		}
 		@include respond(phone-large) {
 			height: 48rem;
 		}
