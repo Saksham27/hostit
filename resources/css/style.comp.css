@@ -248,11 +248,7 @@ p {
         display: block;
         margin-right: 2rem;
         padding: 0;
-        transform: translateY(0.2rem); }
-        .navbar__menu-button::after {
-          content: '';
-          display: table;
-          clear: both; } }
+        transform: translateY(0.2rem); } }
   .navbar__brand-title {
     display: flex;
     align-items: center;
@@ -336,12 +332,16 @@ p {
     font-family: "Libre Franklin", sans-serif;
     margin-top: -7.5rem;
     padding: 31rem 0;
-    background-image: url(../../resources/img/top-banner-1.png);
+    background-image: url(../../resources/img/top-banner-1-min.png);
     background-position: center right;
     background-size: cover;
     background-repeat: no-repeat; }
+    @media only screen and (min-width: 112.5em) {
+      .hero-section__hero-text {
+        background-image: url(../../resources/img/top-banner-1.png); } }
     @media only screen and (max-width: 48em) {
       .hero-section__hero-text {
+        background-image: url(../../resources/img/top-banner-1-min-small.png);
         height: 48rem; } }
 
 .section-packages {
@@ -352,6 +352,9 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain; }
+    @media only screen and (max-width: 65.625em) {
+      .section-packages__container {
+        background-image: url(../../resources/img/bg-1-min.png); } }
   .section-packages__package-list {
     padding-top: 5rem;
     display: flex;
@@ -459,9 +462,12 @@ p {
             order: 0; } }
 
 .section-about {
-  background-image: url(../../resources/img/bg-2.png);
+  background-image: url(../../resources/img/bg-2-min.png);
   background-size: cover;
   padding: 3rem 0; }
+  @media only screen and (min-width: 112.5em) {
+    .section-about {
+      background-image: url(../../resources/img/bg-2.png); } }
   .section-about__heading {
     width: 60%;
     margin: 0 auto; }
@@ -562,7 +568,8 @@ p {
   background-size: initial; }
   @media only screen and (max-width: 65.625em) {
     .section-showcase {
-      flex-direction: column; } }
+      flex-direction: column;
+      background-image: url(../../resources/img/dot-bgpng-min.png); } }
   .section-showcase__details {
     width: 100%;
     padding: 0 5rem 0 0; }
@@ -610,7 +617,10 @@ p {
 
 .section-getstarted {
   padding: 6rem;
-  background-image: url(../../resources/img/bottom-bg.png); }
+  background-image: url(../../resources/img/bottom-bg-min.png); }
+  @media only screen and (min-width: 112.5em) {
+    .section-getstarted {
+      background-image: url(../../resources/img/bottom-bg.png); } }
   .section-getstarted .heading {
     color: #ffffff; }
   .section-getstarted__form {

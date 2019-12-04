@@ -16,6 +16,7 @@
 			background-image: url(../../resources/img/top-banner-1.png);
 		}
 		@include respond(phone-large) {
+			background-image: url(../../resources/img/top-banner-1-min-small.png);
 			height: 48rem;
 		}
 	}
