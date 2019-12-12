@@ -30,29 +30,29 @@
             <div class="navbar__main-nav">
                 <ul class="navbar__main-nav--horizontal">
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#home">Home</a>
+                        <a data-scroll class="menu-item" href="#home">Home</a>
                     </li>
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#packages">Packages</a>
+                        <a data-scroll class="menu-item" href="#packages">Packages</a>
                     </li>
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#services">Why choose Us</a>
+                        <a data-scroll class="menu-item" href="#services">Why choose Us</a>
                     </li>
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#about">About</a>
+                        <a data-scroll class="menu-item" href="#about">About</a>
                     </li>
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#testimonials">testimonials</a>
+                        <a data-scroll class="menu-item" href="#testimonials">testimonials</a>
                     </li>
                     <li class="navbar__main-nav__link">
-                        <a class="menu-item" href="#">Contact</a>
+                        <a data-scroll class="menu-item" href="#">Contact</a>
                     </li>
 
                 </ul>
             </div>
 
             <div class="navbar__button">
-                <a class="btn btn-white" href="#getstarted">Get started Now </a>
+                <a data-scroll class="btn btn-white" href="#getstarted">Get started Now </a>
             </div>
 
         </div>
@@ -394,9 +394,13 @@
     <footer>
         <p>HostIT &copy; Saksham Singh 2019. &nbsp; All Rights Reserved.</p>
     </footer>
-
+    
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
     <script src="js/carousel.js" type="text/javascript"></script>
     <script src="js/hamburger.js" type="text/javascript"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
 </body>
 
